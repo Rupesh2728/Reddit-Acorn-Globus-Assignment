@@ -5,10 +5,9 @@ const Filter = () => {
 
     const frameworks = {
         items: [
-          { value: "react", label: "React" },
-          { value: "vue", label: "Vue" },
-          { value: "angular", label: "Angular" },
-          { value: "svelte", label: "Svelte" },
+          { value: "favorites", label: "Favorites" },
+          { value: "reddit feeds", label: "Reddit Feeds"},
+          { value: "community", label: "Community" },
         ],
       };
 
