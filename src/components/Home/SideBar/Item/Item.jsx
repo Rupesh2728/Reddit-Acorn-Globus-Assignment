@@ -2,15 +2,16 @@ import React from 'react'
 
 const Item = ({name, count, src}) => {
   return (
-    <div className='flex justify-between'>
+    <div className='flex justify-between py-[0.4rem]'>
         <div className='flex'>
-            <img src={src} className='w-[2rem] h-[2rem] rounded-full object-cover'/>
-            <p>{name}</p>
+            <img src={src} className='w-[1.35rem] h-[1.35rem]  rounded-full object-cover'/>
+            <p className='text-[0.7rem] pl-3 font-semibold text-slate-500'>{name}</p>
         </div>
 
-        <div className='bg-slate-500'>
+        {count !==0 && 
+        <div className='bg-slate-300 p-1 text-[0.65rem] font-[500] rounded-md'>
             {count}
-        </div>
+        </div>}
     </div>
   )
 }
