@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from '../../assets/logo.png';
 import profile from '../../assets/profile.jpg';
 import { BsBrightnessHigh } from "react-icons/bs";
@@ -10,8 +10,18 @@ import { FiMessageSquare } from "react-icons/fi";
 import { FiMail } from "react-icons/fi";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
+const NavBar = ({setselecteditem,HandleSearch}) => {
+  const onClickHandler = (ele)=>{
+      setselecteditem(ele);
+  }
 
-const NavBar = () => {
+  const [searchValue, setSearchValue] = useState(''); 
+
+  const handleInputChange = (event) => {
+    HandleSearch(event.target.value);
+    setSearchValue(event.target.value); 
+  };
+
   return (
     <div className='bg-white flex justify-between py-3'>
         <div className='flex items-center'>
@@ -20,24 +30,26 @@ const NavBar = () => {
         </div>
 
         <div className='flex items-center m-auto'>
-            <div className='flex px-4 hover:text-orange-500'>
+            <div className='flex px-4 hover:text-orange-500' onClick={()=>onClickHandler("Home")}>
                 <HiOutlineHome className='text-[1.5rem]' />
                 <p className='px-2 text-[0.95rem]'>Home</p>
             </div>
 
-            <div className='flex px-4 hover:text-orange-500'>
+            <div className='flex px-4 hover:text-orange-500' onClick={()=>onClickHandler("Popular")}>
                 <PiChartLineUp className='text-[1.5rem]'/>
                 <p className='px-2 text-[0.95rem]'>Popular</p>
             </div>
 
-            <div className='flex px-4 hover:text-orange-500'>
+            <div className='flex px-4 hover:text-orange-500' onClick={()=>onClickHandler("All")}>
                 <IoStatsChartSharp className='text-[1.5rem]'/>
                 <p className='px-2 text-[0.95rem]'>All</p>
             </div>
 
             <div className='bg-slate-100 h-[2.5rem] w-[22rem] flex px-2 rounded-lg ml-[3rem]'>
                 <FaSearch className='items-center my-auto mx-2 bg-[#f1f5f9]'/>
-                <input placeholder='Find community or post' className=' bg-slate-100  outline-none placeholder:text-[0.8rem]'/>
+                <input placeholder='Find community or post' className=' bg-slate-100  outline-none placeholder:text-[0.8rem]'
+                 value={searchValue}
+                 onChange={handleInputChange} />
             </div>
 
             <div className='flex ml-[3rem] px-4'>

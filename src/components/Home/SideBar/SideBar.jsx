@@ -1,13 +1,17 @@
 import React from 'react'
 import Item from './Item/Item';
-import profile from '../../../assets/profile.jpg';
 import Filter from './Filter/Filter';
 
-const SideBar = () => {
-  return (
-    <div className='w-[13%] flex-col max-h-screen ml-[2rem]'>
+const SideBar = ({Handlefilter}) => {
+  
+   const filterfunc= (filter)=>{
+      Handlefilter(filter);
+   }
+  
+   return (
+    <div className='w-[14%] flex-col max-h-screen ml-[2rem]'>
         <div className='mt-[1rem]'>
-            <Filter/>
+            <Filter filterfunc={filterfunc}/>
         </div>
         
         <div className='border-[0.1rem] border-slate-300 border-t-0 border-l-0 border-r-0 mt-[1rem]'>

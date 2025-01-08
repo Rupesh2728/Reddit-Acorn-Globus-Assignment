@@ -1,18 +1,23 @@
 import React, { useState } from 'react';
 
-const Filter = () => {
+const Filter = ({filterfunc}) => {
     const [selectedValue, setSelectedValue] = useState("");
 
     const frameworks = {
         items: [
-          { value: "favorites", label: "Favorites" },
-          { value: "reddit feeds", label: "Reddit Feeds"},
-          { value: "community", label: "Community" },
+          { value: "news", label: "News" },
+          { value: "technology", label: "Technology"},
+          { value: "lovestory", label: "Love Story" },
+          { value: "gaming", label: "Gaming" },
+          { value: "movie", label: "Movie" },
+          { value: "gifs", label: "Gifs" },
         ],
       };
 
   const handleChange = (event) => {
+    filterfunc(event.target.value);
     setSelectedValue(event.target.value);
+
   };
   
     return (
