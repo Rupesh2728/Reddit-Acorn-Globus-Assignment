@@ -276,6 +276,7 @@ const Content = ({ selecteditem, filter, searchValue }) => {
         <button
           className=" p-2 rounded-md hover:bg-slate-100 bg-slate-300"
           onClick={() => goToPage(currentPage + 1)}
+          disabled = {dataarr.length ===0}
         >
           <FaChevronRight className="text-slate-500  cursor-pointer"/>
         </button>
