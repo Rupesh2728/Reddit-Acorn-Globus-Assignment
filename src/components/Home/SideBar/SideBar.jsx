@@ -9,7 +9,7 @@ const SideBar = ({Handlefilter}) => {
    }
   
    return (
-    <div className='w-[14%] flex-col max-h-screen ml-[2rem]'>
+    <div className='w-[14%] flex-col ml-[2rem]'>
         <div className='mt-[1rem]'>
             <Filter filterfunc={filterfunc}/>
         </div>

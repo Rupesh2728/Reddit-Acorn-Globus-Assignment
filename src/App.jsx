@@ -21,7 +21,7 @@ function App() {
   return (
     <div className="bg-slate-200 cursor-pointer max-h-screen">
      <NavBar setselecteditem={setselecteditem} HandleSearch={HandleSearch}/>
-    <div className="flex">
+    <div className="flex bg-slate-200">
       <SideBar Handlefilter={Handlefilter}/>
       <Content selecteditem={selecteditem} filter={filter} searchValue={searchValue}/>
       <Advertise/>
