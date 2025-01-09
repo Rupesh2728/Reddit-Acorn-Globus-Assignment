@@ -23,7 +23,7 @@ const NavBar = ({setselecteditem,HandleSearch}) => {
   };
 
   return (
-    <div className='bg-white flex justify-between py-3'>
+    <div className='bg-white flex justify-between py-[0.65rem]'>
         <div className='flex items-center'>
           <BsBrightnessHigh className='text-[1.3rem] ml-[2rem] hover:text-orange-500'/>
           <img src={logo} className='h-[2.25rem] px-4'/> 
