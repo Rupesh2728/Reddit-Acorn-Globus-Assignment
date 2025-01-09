@@ -1,6 +1,6 @@
 <h1 align="center">Acorn Globus Assignment - Reddit</h1>
 <h4 align="center">The application provides a user-friendly interface where users can efficiently read posts related to various topics</h4>
-<h4 align="center">Visit the website at https://inpainting-widget-byvd.vercel.app/</h4>
+<h4 align="center">Visit the website at https://reddit-rho-one.vercel.app/</h4>
 
 <h2 align="left">Tech Stack and Tools :</h2>
 
