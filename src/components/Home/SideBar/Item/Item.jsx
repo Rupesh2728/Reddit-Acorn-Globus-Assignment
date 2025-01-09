@@ -11,7 +11,7 @@ const Item = ({name, count, src}) => {
         {count !==0 && 
         <div className='bg-slate-300 p-1 text-[0.65rem] font-[500] rounded-md w-[1.75rem] flex justify-center'>
            <p>
-           {count}
+           {count < 10 ? `0${count}` : count}
            </p>
         </div>}
     </div>

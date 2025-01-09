@@ -12,7 +12,7 @@ const DataItem = ({data}) => {
     };
 
   return (
-    <div className='border-2 border-slate-200 rounded-md flex mt-[0.5rem] mb-[1rem]' onClick={()=>handleClick(data.url)}>
+    <div className='border-2 border-slate-200 rounded-md flex mt-[0.5rem] mb-[1.5rem]' onClick={()=>handleClick(data.url)}>
         <div className='flex p-3'>
           <div className='m-auto'>
           {data.imgurl && data.imgurl!=="self" && <img src={data.imgurl} className='object-cover w-[6rem] h-[6rem] rounded-md'/>}
@@ -64,7 +64,7 @@ const DataItem = ({data}) => {
                 <GoShareAndroid/>
                 
                 <p className='text-[0.9rem] font-semibold text-slate-500 '>
-                    120
+                    {data.num_shares}
                 </p>
 
                 <p className='text-[0.8rem] text-slate-600'>

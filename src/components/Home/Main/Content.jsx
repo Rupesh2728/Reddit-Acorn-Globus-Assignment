@@ -116,6 +116,11 @@ const Content = ({ selecteditem, filter, searchValue }) => {
             title: post.title,
             postedAt: convertUnixToFormattedDate(post.created_utc),
             author: post.author,
+
+            num_shares : Number(post.num_crossposts) > 1000
+            ? `${Math.floor(Number(post.num_crossposts) / 1000)}K`
+            : post.num_crossposts,
+
             num_comments:
               Number(post.num_comments) > 1000
                 ? `${Math.floor(Number(post.num_comments) / 1000)}K`
@@ -166,6 +171,11 @@ const Content = ({ selecteditem, filter, searchValue }) => {
             title: post.title,
             postedAt: convertUnixToFormattedDate(post.created_utc),
             author: post.author,
+
+            num_shares : Number(post.num_crossposts) > 1000
+            ? `${Math.floor(Number(post.num_crossposts) / 1000)}K`
+            : post.num_crossposts,
+
             num_comments:
               Number(post.num_comments) > 1000
                 ? `${Math.floor(Number(post.num_comments) / 1000)}K`
@@ -251,7 +261,17 @@ const Content = ({ selecteditem, filter, searchValue }) => {
                   return <DataItem key={index} data={data} />;
                 })}
 
-              {searchresultsarr.length == 0 && <p>No Posts</p>}
+              
+               {searchresultsarr.length == 0 &&  
+              
+                <div className="flex justify-center">
+  
+                  <div className="flex items-center mt-[7rem]">
+                    <img className="w-[15rem]" src="https://media.istockphoto.com/id/1290154699/vector/comic-speech-bubble-with-text-oops-message-in-pop-art-style.jpg?s=612x612&w=0&k=20&c=4J-vEqvSWx-HEq8IiG5qP1WcM4Sf1xNsmXNInjMzWHY="/>
+                    <p className="text-[2rem] font-semibold">No Posts</p>                
+                  </div>
+                </div>
+                }
             </div>
           </>
         )}
