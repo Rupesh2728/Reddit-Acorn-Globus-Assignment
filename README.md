@@ -52,7 +52,7 @@
 - Please take a moment to watch and gain an understanding of the platform's offerings.
 
 
-https://github.com/user-attachments/assets/33fd9cbb-0cf3-4bf2-963f-7bd8317299d4
+https://github.com/user-attachments/assets/16c44a97-ffd8-4cf9-9674-58f9705d3dcb
 
 
 <h2 align="left">Installation</h2>
